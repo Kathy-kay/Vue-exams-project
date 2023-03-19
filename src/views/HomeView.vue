@@ -24,6 +24,7 @@ export default{
 
 <style scoped>
   .container{
+    position:relative;
     padding: 100px 0 0 150px;
   }
   .name{
@@ -58,9 +59,10 @@ export default{
   .hero-btn:hover{
     background-color: rgba(100,255,218,0.1);
   }
-  @media (max-width: 700px){
+  @media (max-width: 750px){
     .container{
       padding: 100px 0 0 70px;
+      z-index: -1;
     }
   }
 </style>
