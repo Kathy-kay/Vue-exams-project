@@ -73,7 +73,7 @@ nav{
     flex-direction: row;
     padding: 12px 0;
     transition: .5s ease all;
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
     overflow:hidden;
     

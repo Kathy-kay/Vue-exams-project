@@ -111,10 +111,10 @@
 
 <style scoped>
     .container{
-        padding: 100px 70px 0 130px;
+        margin: 0 auto;
         display: flex;
-        width: 100%;
-        
+        width: 92%;
+        padding-block: 60px;
         
     }
     
@@ -167,7 +167,8 @@
         .container{
             display: flex;
             flex-direction: column;
-            padding: 100px 70px 0 80px;
+          padding-left: 20px;
+          padding-right:20px;
             
         }
         
@@ -210,25 +211,7 @@
         color:#ccd6f6;
 
     }
-    @media(max-width: 1115px){
-        .container{
-            padding-left: 100px;
-        }
-    }
         
-    @media (max-width:950px){
-        .container{
-            padding-left: 80px;
-        }
-        
-    }
-    @media(max-width:900px){
-        ul{
-            grid-template-columns: 1fr;
-        }
-        .pagination{
-            margin-left: 30PX;
-            margin-bottom:30px
-        }
-    }
+    
+   
 </style>

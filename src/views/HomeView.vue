@@ -64,7 +64,7 @@ export default{
   }
   .hero-welcome{
     margin-top: 20px ;
-    line-height: 0.9;
+    line-height: 1.25;
     color: #8892b0;
     font-size: clamp(40px, 8vw, 80px);
     overflow-y: hidden;
@@ -89,7 +89,7 @@ export default{
   
   @media (max-width: 750px){
     .container{
-      padding: 100px 0 0 70px;
+      padding: 100px 0 0 30px;
     
     }
     
