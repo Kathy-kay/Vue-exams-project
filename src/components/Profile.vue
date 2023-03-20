@@ -86,8 +86,8 @@ export default{
         }
         .img{
             margin-right: 40px;
-            width: 130px;
-            height: 130px;
+            width: 100px;
+            height: 100px;
         }
         .profile-img{
             flex-direction: row;
@@ -97,6 +97,12 @@ export default{
         }
         .profile-info{
             margin: 40px 0;
+        }
+    }
+    @media(max-width: 900px){
+        .img{
+            width: 120px;
+            height: 120px;
         }
     }
 </style>
