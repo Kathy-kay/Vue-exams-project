@@ -115,6 +115,7 @@
         display: flex;
         width: 100%;
         
+        
     }
     
     .repos-list{

@@ -5,6 +5,7 @@ export default{
     methods:{
       goToRepo(){
         this.$router.push('/repos')
+        console.log("Hello")
       }
 
     }
@@ -80,7 +81,7 @@ export default{
     border-radius: 5px;
     color: #64ffda;
     cursor: pointer;
-    overflow-y: hidden;
+    
   }
   .hero-btn:hover{
     background-color: rgba(100,255,218,0.1);
@@ -89,7 +90,8 @@ export default{
   @media (max-width: 750px){
     .container{
       padding: 100px 0 0 70px;
-      z-index: -1;
+    
     }
+    
   }
 </style>
