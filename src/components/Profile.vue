@@ -1,8 +1,8 @@
 <template>
-    <div  class="profile">
+    <div  class="profile slide-in-left">
            <div class="profile-img" >
                 <img src="https://avatars.githubusercontent.com/u/75392925?v=4" alt="kathy-kay profile"
-                class="img">
+                class="img ">
                 <div class="profile-name">
                     <h2>Kafayat Adigun</h2>
                     <p>Kathy-kay</p>
@@ -34,6 +34,7 @@ export default{
     .profile{
         width: 30%;
         padding: auto;
+        overflow:hidden
        
     }
     .profile-img{

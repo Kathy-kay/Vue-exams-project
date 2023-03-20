@@ -1,13 +1,13 @@
 <template>
     <header :class="{'scrolled-nav':scrollPosition}">
         <nav>
-            <h1 class="logo">KATHY</h1>
+            <h1 class="logo slide-in-bottom" style="--i:0.2s">KATHY</h1>
             <ul v-show = "!mobile" class="navigation">
-                <li><router-link class="llink" to="/">Home</router-link></li>
-                <li><router-link class="llink" to="/repos">Repos</router-link></li>
-                <li><router-link class="llink" to="/error">Error</router-link></li>
+                <li style="--i:0.4s" class="slide-in-bottom"><router-link class="llink" to="/">Home</router-link></li>
+                <li style="--i:0.6s" class="slide-in-bottom"><router-link class="llink" to="/repos">Repos</router-link></li>
+                <li style="--i:0.8s" class="slide-in-bottom"><router-link class="llink" to="/error">Error</router-link></li>
             </ul>
-            <div class="icon">
+            <div class="icon slide-in-bottom" style="--i:0.4s">
                 <font-awesome-icon icon="fa-solid fa-bars" size="lg"
                 v-show="mobile" @click="toggleMobileNav" class="icon-bar" :class="{'icon-active': mobileNav}"/>
             </div>
@@ -75,6 +75,7 @@ nav{
     transition: .5s ease all;
     width: 90%;
     margin: 0 auto;
+    overflow:hidden;
     
 
 }
@@ -96,6 +97,7 @@ nav{
     align-items: center;
     flex: 1;
     justify-content: flex-end;
+    overflow:hidden;
 }
 nav ul li{
     text-transform: uppercase;

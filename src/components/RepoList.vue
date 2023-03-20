@@ -5,28 +5,28 @@
         <Profile />
        
         <div class="repos-list">
-            <div class="repo-container">
-                <h1>My GitHub Repositories</h1>
-            <ul >
-                <li v-for="repo in slicedRepos" :key="repo.id" class="repo-content">
-                  <router-link :to="{ name: 'RepoDetails', params: { repoName: repo.name } }">
-                    <h2>{{ repo.name }} </h2>
-                    <p>{{ repo.description }}</p>
-                    <p>{{ repo.language }}</p>
-                  </router-link>
-                </li>
-            </ul>
-            <div v-if="loading">Loading...</div>
-            <div v-if="error" class="">{{ error }}</div>
-            <div v-if="!loading && !error && !repos.length" class="">No repositories found</div>
-            <div class="pagination" v-if="pages.length > 1">
-                <button class="prev" @click="prevPage" :disabled="currentPage === 1">Prev</button>
-                <button v-for="page in pages" 
-                @click="setCurrentPage(page)" 
-                :key="page" 
-                :class="{ active: page === currentPage }">{{ page }}</button>
-                <button class="next" @click="nextPage" :disabled="currentPage === pages.length">Next</button>
-            </div>
+            <div class="repo-container slide-in-bottom">
+                    <h1>My GitHub Repositories</h1>
+                <ul >
+                    <li v-for="repo in slicedRepos" :key="repo.id" class="repo-content">
+                    <router-link :to="{ name: 'RepoDetails', params: { repoName: repo.name } }">
+                        <h2>{{ repo.name }} </h2>
+                        <p>{{ repo.description }}</p>
+                        <p>{{ repo.language }}</p>
+                    </router-link>
+                    </li>
+                </ul>
+                <div v-if="loading">Loading...</div>
+                <div v-if="error" class="">{{ error }}</div>
+                <div v-if="!loading && !error && !repos.length" class="">No repositories found</div>
+                <div class="pagination" v-if="pages.length > 1">
+                    <button class="prev" @click="prevPage" :disabled="currentPage === 1">Prev</button>
+                    <button v-for="page in pages" 
+                    @click="setCurrentPage(page)" 
+                    :key="page" 
+                    :class="{ active: page === currentPage }">{{ page }}</button>
+                    <button class="next" @click="nextPage" :disabled="currentPage === pages.length">Next</button>
+                </div>
 
             </div>
         </div>    
@@ -119,6 +119,7 @@
     
     .repos-list{
         width: 70%;
+        overflow:hidden;
        
         
         
