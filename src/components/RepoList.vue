@@ -1,28 +1,9 @@
  
 <template>
     <div class="container">
-        <div  class="profile">
-           <div class="profile-img" >
-                <img src="https://avatars.githubusercontent.com/u/75392925?v=4" alt="kathy-kay profile"
-                class="img">
-                <div class="profile-name">
-                    <h2>Kafayat Adigun</h2>
-                    <p>Kathy-kay</p>
-                </div>
-           </div>
-           <div class="profile-info">
-              <h2 >Student at Altschool Africa</h2>
-              <div class="profile-info1">
-                
-                <a href="mailto:adigunkafy27@gmail.com">adigunkafy27@gmail.com</a>
-                
-              </div>
-              <div class="profile-info2">
-                
-                <p>33 folllowers, 52 following</p>
-              </div>
-           </div>
-        </div>    
+        
+        <Profile />
+       
         <div class="repos-list">
             <div class="repo-container">
                 <h1>My GitHub Repositories</h1>
@@ -54,9 +35,13 @@
 
 <script >
      import axios from "axios"
+     import Profile from "./Profile.vue"
     
     export default {
-    
+        name: "RepoList",
+        components: {
+            Profile
+        },
 
         data(){
             return{
@@ -131,60 +116,20 @@
         width: 100%;
         
     }
-    .profile{
-        width: 30%;
-        padding: auto;
-       
-    }
-    .profile-img{
-        display: flex;
-        flex-direction: column;
-    }
-    .img{
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-
-    }
-    .profile-name{
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-        color: #ccd6f6;
-        margin-bottom: 30px;
-    }
-    .profile-name p{
-        color: #8892b0;
-    }
-    .profile-name h2{
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-    .profile-name p{
-        font-size: 20px;
-       
-    }
-    .profile-info h2{
-        color: #ccd6f6;
-    }
-    .profile-info a{
-        text-decoration: none;
-        color: #64ffda;
-    }
-    .profile-info1{
-        margin: 10px 0;
-    }
-    .profile-info2{
-        color: #8892b0;
-    }
-    .profile-list{
-        padding: 0 30px;
-    }
+    
     .repos-list{
         width: 70%;
+       
+        
+        
     }
     .repo-container{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left:50px;
+        
        
     }
     .repo-container h1{
@@ -194,13 +139,13 @@
     ul{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap:20px;
+        gap:30px;
         margin-top: 50px;
     }
     .repo-content{
         width: 100%;
         border:1px solid #112240;
-        height: 100px;
+        height: 130px;
         padding: 10px 30px;
         border-radius: 8px;
         background-color: #233554;
@@ -213,34 +158,23 @@
         color: #ccd6f6;
     }
 
-    @media (max-width:900px){
+    @media (max-width:750px){
         ul{
             grid-template-columns: 1fr;
         }
         .container{
             display: flex;
             flex-direction: column;
+            padding: 100px 70px 0 80px;
             
         }
-        .profile{
-            width: 100%;
-        }
-        .img{
-            margin-right: 40px;
-            width: 150px;
-            height: 150px;
-        }
-        .profile-img{
-            flex-direction: row;
-        }
-        .profile-name{
-            margin: auto;
-        }
-        .profile-info{
-            margin: 40px 0;
-        }
+        
         .repos-list{
             width: 100%;
+            
+        }
+        .repo-container{
+            padding-left: 0;
         }
         .pagination{
             width: 100%;
@@ -253,7 +187,7 @@
 
     .pagination{
         margin: 40px 0 0 70px;
-        width: 70%;
+        width: 80%;
        
     }
     .pagination button{
@@ -273,5 +207,26 @@
         border: 1px solid transparent;
         color:#ccd6f6;
 
+    }
+    @media(max-width: 1115px){
+        .container{
+            padding-left: 100px;
+        }
+    }
+        
+    @media (max-width:950px){
+        .container{
+            padding-left: 80px;
+        }
+        
+    }
+    @media(max-width:900px){
+        ul{
+            grid-template-columns: 1fr;
+        }
+        .pagination{
+            margin-left: 30PX;
+            margin-bottom:30px
+        }
     }
 </style>
